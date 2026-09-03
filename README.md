@@ -13,9 +13,40 @@ O objetivo principal é eliminar o trabalho braçal de conferência de itens, ut
 - **Exportação Preservada:** Inserção dos dados processados na planilha final de levantamento de custos mantendo as cores, layout e formatação original intactos.
 
 ## 🛠️ Tecnologias Utilizadas
-* **[Python](https://www.python.org/)** - Linguagem principal do projeto.
+* **[Python 3.8+](https://www.python.org/)** - Linguagem principal do projeto.
 * **[Pandas](https://pandas.pydata.org/)** - Estruturação e manipulação inicial dos dados.
 * **[Openpyxl](https://openpyxl.readthedocs.io/)** - Escrita cirúrgica na planilha Excel final.
-* **[pdfplumber](https://github.com/jsvine/pdfplumber)** - Leitura e extração do raw text das Ordens de Compra.
+* **[pdfplumber](https://github.com/jsvine/pdfplumber)** - Leitura e extração estruturada de textos em arquivos PDF.
 * **[TheFuzz](https://github.com/seatgeek/thefuzz)** - Algoritmo de distância de Levenshtein para similaridade de textos.
-* **[Google Generative AI](https://aistudio.google.com/)** - Uso do modelo Gemini 2.5 Flash para classificação semântica.
+* **[Google Generative AI](https://aistudio.google.com/)** - Uso da API Gemini para classificação semântica de materiais.
+
+## ⚙️ Pré-requisitos
+Antes de começar, você precisará ter instalado em sua máquina:
+* [Python](https://www.python.org/downloads/)
+* Uma chave de API gratuita do [Google AI Studio](https://aistudio.google.com/)
+
+## 📦 Instalação
+
+**1. Clone o repositório:**
+```bash
+git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
+cd NOME_DO_REPOSITORIO
+```
+
+**2. Instale as dependências necessárias:**
+Recomenda-se o uso de um ambiente virtual (venv). Execute o comando abaixo para instalar todas as bibliotecas:
+```bash
+pip install pandas openpyxl pdfplumber thefuzz google-genai
+```
+
+## 🔑 Configuração
+Abra o arquivo .env_exemplo do script e insira a sua chave de API na variável correspondente:
+```python
+API_KEY = COLOQUE_SUA_CHAVE_GERADA_AQUI
+```
+## 🚀 Como Executar
+Com a chave configurada e os arquivos base posicionados nas pastas do projeto, basta rodar o script no seu terminal:
+```bash
+python ETAPA_1.py
+```
+O sistema irá ler os PDFs, cruzar os dados, acionar a inteligência artificial e gerar o arquivo `LEVANTAMENTO_PREENCHIDO.xlsx` contendo todo o consolidado de custos.
