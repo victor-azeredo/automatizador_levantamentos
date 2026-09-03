@@ -29,8 +29,8 @@ Antes de começar, você precisará ter instalado em sua máquina:
 
 **1. Clone o repositório:**
 ```bash
-git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
-cd NOME_DO_REPOSITORIO
+git clone [https://github.com/victor-azeredo/automatizador_levantamentos.git](https://github.com/victor-azeredo/automatizador_levantamentos.git)
+cd automatizador_levantamentos
 ```
 
 **2. Instale as dependências necessárias:**
